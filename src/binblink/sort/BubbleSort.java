@@ -25,6 +25,12 @@ public class BubbleSort {
 
     }
 
+    /*
+     *@Author:binblink
+     *@Description:冒泡降序
+     *@Date:2018/3/31 15:23
+     *@param:
+    **/
     public static void sortDesc(int[] unsortArr){
 
         for(int i = 0;i<unsortArr.length-1;i++){
