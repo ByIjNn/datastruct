@@ -1,7 +1,8 @@
-package binblink.sort;
+package com.binblink.sort;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ScheduledExecutorService;
 
 /**
  * @Author binblink
@@ -52,6 +53,7 @@ public class InsertSort {
             int height = i-1;
 
             if(arr[i]>arr[i-1]){
+
                 continue;
             }
 
@@ -70,8 +72,6 @@ public class InsertSort {
             }
             arr[height+1]=temp;
         }
-
-
     }
 
 

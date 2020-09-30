@@ -1,4 +1,4 @@
-package binblink.list;
+package com.binblink.list;
 
 import java.util.LinkedList;
 import java.util.NoSuchElementException;

@@ -1,4 +1,4 @@
-package binblink.stack;
+package com.binblink.stack;
 
 import java.util.EmptyStackException;
 

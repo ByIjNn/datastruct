@@ -1,4 +1,4 @@
-package binblink.sort;
+package com.binblink.sort;
 
 /**
  * @author:binblink
@@ -6,6 +6,11 @@ package binblink.sort;
  * @Date: Create on  2018/3/31 15:26
  * @Modified By:
  * @Version:1.0.0
+ *
+ *
+
+ *
+ *
  **/
 public class ShellSort {
 

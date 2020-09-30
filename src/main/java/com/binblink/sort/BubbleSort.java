@@ -1,4 +1,4 @@
-package binblink.sort;
+package com.binblink.sort;
 
 /**
  * @Author binblink
