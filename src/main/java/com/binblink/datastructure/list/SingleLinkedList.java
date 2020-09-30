@@ -1,6 +1,5 @@
-package com.binblink.list;
+package com.binblink.datastructure.list;
 
-import java.util.LinkedList;
 import java.util.NoSuchElementException;
 
 public class SingleLinkedList<T> {

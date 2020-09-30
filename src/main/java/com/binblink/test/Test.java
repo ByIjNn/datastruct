@@ -1,6 +1,6 @@
 package com.binblink.test;
 
-import com.binblink.stack.StackArray;
+import com.binblink.datastructure.stack.StackArray;
 
 
 /**

@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-    <bean id="list" name="list" class="com.binblink.list.SingleLinkedList"></bean>
+    <bean id="list" name="list" class="com.binblink.datastructure.list.SingleLinkedList"></bean>
 
     <bean id="list2" class="java.util.ArrayList">
        <constructor-arg name="initialCapacity" value="8"></constructor-arg>

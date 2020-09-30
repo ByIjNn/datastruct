@@ -1,7 +1,7 @@
 package com.binblink.spring;
 
 
-import com.binblink.list.SingleLinkedList;
+import com.binblink.datastructure.list.SingleLinkedList;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

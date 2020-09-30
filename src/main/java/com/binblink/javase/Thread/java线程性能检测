@@ -1,0 +1,9 @@
+1、使用Lmbench3可以测量上下文切换的时长。
+
+2、使用vmstat可以测量上下文切换的次数。
+
+
+jstack 在 openjdk中默认没有 安装命令 yum install java-1.7.0-openjdk-devel -y
+
+jstack pid 如：31177 指定输出文件目录 > /home/tengfei.fangtf/dump1
+ 然后根据线程情况 调整相应的参数。减少waiting 线程

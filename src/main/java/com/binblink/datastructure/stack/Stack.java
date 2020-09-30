@@ -1,4 +1,4 @@
-package com.binblink.stack;
+package com.binblink.datastructure.stack;
 
 
 /**

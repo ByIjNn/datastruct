@@ -1,4 +1,4 @@
-package com.binblink.tree;
+package com.binblink.datastructure.tree;
 
 /**
  * @Author binblink
