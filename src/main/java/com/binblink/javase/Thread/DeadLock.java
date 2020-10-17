@@ -1,6 +1,7 @@
 package com.binblink.javase.Thread;
 
 import java.util.concurrent.LinkedTransferQueue;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * @author binblink
@@ -52,6 +53,8 @@ public class DeadLock {
 
     public static void main(String[] args) {
 //        new DeadLock().deadLock();
+//        AtomicInteger ai = new AtomicInteger();
+//        ai.compareAndSet(0,1);
         System.out.println(new DeadLock().hashCode());
     }
 }

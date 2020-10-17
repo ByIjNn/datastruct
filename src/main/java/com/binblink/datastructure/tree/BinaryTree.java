@@ -7,7 +7,7 @@ package com.binblink.datastructure.tree;
  */
 public class BinaryTree<T> {
 
-    private Object[] arrayTree;
+    private T[] arrayTree;
 
     private class TreeNode<T>{
 

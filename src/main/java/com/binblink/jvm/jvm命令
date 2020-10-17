@@ -1,2 +1,0 @@
--XX:BiasedLockingStartupDelay=0 关闭偏向锁启动延迟
--XX:-UseBiasedLocking=false 关闭偏向锁：那么程序默认会进入轻量级锁状态
