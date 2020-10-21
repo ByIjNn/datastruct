@@ -1,61 +1,60 @@
 package com.binblink.sort;
-
-/**
- * @author:binblink
- * @Description 希尔排序 特殊的插入排序
- * @Date: Create on  2018/3/31 15:26
- * @Modified By:
- * @Version:1.0.0
- *
- *
-
- *
- *
- **/
+/*
+ * Shell排序：
+ * 1.将有n个元素的数组分成n/2个数字序列，第一个数据和第n/2+1个数据为一对.....
+ * 2.一次循环使每个序列对排好序
+ * 3.然后，再变为n/4个序列，再次排序
+ * 4.不断重复上述过程，随着序列减少为最后一个，就完成了整个排序。
+ * 具有较高的效率。
+ */
 public class ShellSort {
+	static final int SIZE = 10;
+	
+	public static void shellSort(int[] m) {
+		int i,j,h;
+		int r,temp;
+		int x = 0;
+		
+		for(r=m.length/2;r>=1;r/=2){
+			
+			for(i=r;i<m.length;i++){
+				temp=m[i];
+				j=i-r;
+				while(j>=0&&temp<m[j]){
+					m[j+r]=m[j];
+					j-=r;
+				}
+				m[j+r]=temp;
+			}
+			x++;
+			System.out.println("第" + x + "步排序结果：");
+			for( h = 0;h<m.length;h++){
+				System.out.print( " " + m[h]);
+			}
+			System.out.println("\n");
+		}
+	}
+	
+	public static void main(String[] args) {
+		int[] m = new int[SIZE];
+		int i;
+		for(i=0;i<SIZE;i++){
+			m[i]=(int) (100 + Math.random()*(100+1));//产生随机数初始化数组
+		}
+		System.out.println("排序前数组为：");
+		for(i=0;i<SIZE;i++){
+			System.out.print(m[i]+" ");
+		}
+		System.out.println("\n");
+		
+		shellSort(m);
+		System.out.println("排序后数组为：");
+		for(i=0;i<SIZE;i++){
+			System.out.print(m[i]+ " ");
+		}
+		System.out.println("\n");
+	}
 
-    /*
-     *@Author:binblink
-     *@Description:希尔排序
-     *@Date:2018/3/31 15:28
-     *@param:
-    **/
-    public static void shellSort(int[] arr){
+	
 
-        int addstep = arr.length;//增量
-        addstep = addstep/2;
-        while(addstep>=1){
-            System.out.println("增量为："+addstep);
-            for (int i = addstep; i <arr.length ; i+=addstep) {
-                if(arr[i]<arr[i-addstep]){
-                        int temp = arr[i];
-
-                        for(int j =i-addstep;j>=0&&temp<arr[j];j-=addstep){
-                            arr[j+addstep] = arr[j];
-                            arr[j] = temp;
-                        }
-                }
-            }
-            addstep = addstep/2;
-        }
-    }
-
-    public static void main(String[] args) {
-        int[] m = {-2,25,48,-789,5,234,34,146,65,-14,546,456,44,33,22,657};
-
-        for(int l : m){
-
-            System.out.print(l+",");
-        }
-
-        System.out.println("-----------before---------");
-
-        shellSort(m);
-        System.out.println("-----------after---------");
-
-        for(int l : m){
-
-            System.out.print(l+",");
-        }
-    }
 }

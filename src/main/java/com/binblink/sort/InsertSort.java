@@ -8,6 +8,10 @@ import java.util.concurrent.ScheduledExecutorService;
  * @Author binblink
  * @Create Time　2018/3/27 21:43
  * @Description:插入排序
+ *
+ * 插入排序：首先对数组的前两个数据进行比较，接着将第三个数据域排好序的两个数据比较，将第三个数据插入到合适的位置。
+ * 然后，将第四个数据插入到已排好寻的三个数据中；不断重复以上步骤，直到把最后一个数据插入到合适的位置。
+
  */
 public class InsertSort {
 
