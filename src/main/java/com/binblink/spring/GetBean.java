@@ -13,7 +13,7 @@ public class GetBean {
     @Test
     public void getbeanTest1() {
 
-        String path = "classpath:application.xml";
+        String path = "classpath:application-spring.xml";
 
         ApplicationContext xmlApplicationContext =
                 new ClassPathXmlApplicationContext(path);

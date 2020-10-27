@@ -1,0 +1,29 @@
+
+person:
+  lastName: hello
+  age: 18
+  boss: false
+  birth: 2017/12/12
+  maps: {k1: v1,k2: 12}
+  lists:
+    ‐ lisi
+    ‐ zhaoliu
+  dog:
+    name: 小狗
+    age: 12
+
+
+
+spring:
+  redis:
+    cluster:
+      nodes: 192.168.1.9:6379,192.168.1.9:6308,192.168.1.8:6308,192.168.1.8:6379
+    max-redirects: 3
+    lettuce:
+          pool:
+            max-active: 1000  #连接池最大连接数（使用负值表示没有限制）
+            max-idle: 10 # 连接池中的最大空闲连接
+            min-idle: 5 # 连接池中的最小空闲连接
+            max-wait: -1
+
+

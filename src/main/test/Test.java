@@ -1,10 +1,8 @@
 package com.binblink.test;
 
-import com.binblink.datastructure.stack.StackArray;
+
 import com.binblink.datastructure.tree.RedBlackTree;
 
-import java.lang.reflect.ParameterizedType;
-import java.lang.reflect.Type;
 import java.util.HashMap;
 
 
@@ -21,6 +19,8 @@ public class Test {
             return 1;
         }
     }
+
+
 
     @org.junit.jupiter.api.Test
     public void test(){
