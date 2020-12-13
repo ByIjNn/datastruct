@@ -89,14 +89,15 @@ public class CommonUserOFLambda {
     }
 
     /**
-     * 闭包问题 我们在匿名内部类中也会存在，如果我们把注释放开会报错，告诉我 num 值是 final 不能被改变。这里我们虽然没有标识 num 类型为 final，
+     * 闭包问题 我们在匿名内部类中也会存在，如果我们把注释放开会报错，告诉我 num 值是 final 不能被改变。
+     * 这里我们虽然没有标识 num 类型为 final，
      * 但是在编译期间虚拟机会帮我们加上 final 修饰关键字。
      */
     @Test
     public void test4(){
 
         int num = 10;
-
+//        num = num + 2; //放在这里没问题
         Consumer<String> consumer = ele -> {
             System.out.println(num);
         };

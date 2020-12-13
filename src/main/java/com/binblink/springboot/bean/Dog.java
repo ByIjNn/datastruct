@@ -23,6 +23,10 @@ public class Dog   {
         this.age = age;
     }
 
+    public void init(){
+        System.out.println("initiiiiiiiiiiiiiiiiiiiiiiiii");
+    }
+
     @Override
     public String toString() {
         return "Dog{" +

@@ -4,9 +4,17 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-    <bean id="list" name="list" class="com.binblink.datastructure.list.SingleLinkedList"></bean>
-
-    <bean id="list2" class="java.util.ArrayList">
+    <bean id="list1"  name="list" class="com.binblink.datastructure.list.SingleLinkedList"></bean>
+    <bean id="list2" name="list2" init-method="size" class="java.util.ArrayList">
        <constructor-arg name="initialCapacity" value="8"></constructor-arg>
     </bean>
+
+    <bean id="dog" name="dog" init-method="init" class="com.binblink.springboot.bean.Dog">
+    </bean>
+
+    <bean id="baenlife" name="keke" init-method="init" destroy-method="destroyxml" class="com.binblink.springboot.bean.BeanLifeCycle">
+        <property name="name" value="傻逼"></property>
+        <property name="age" value="12"></property>
+    </bean>
+
 </beans>

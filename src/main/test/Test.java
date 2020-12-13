@@ -24,7 +24,7 @@ public class Test {
 
     @org.junit.jupiter.api.Test
     public void test(){
-
+        Integer.toBinaryString(151565);
         A s = new  A();
 
         A m = s;
