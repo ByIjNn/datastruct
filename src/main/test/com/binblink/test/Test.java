@@ -80,6 +80,12 @@ public class Test {
         System.out.println(root.find(30));
     }
 
+    @org.junit.jupiter.api.Test
+    public void test4(){
+
+        System.out.println("/sadsd/dasd/dasd/das//security/login".contains("/security/login"));
+    }
+
 
 
     public static void main(String[] args) throws InterruptedException {
@@ -165,4 +171,7 @@ public class Test {
 //        System.out.println(stackArray.peek());
 
     }
+
+
+
 }
