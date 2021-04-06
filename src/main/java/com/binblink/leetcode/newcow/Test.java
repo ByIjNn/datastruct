@@ -69,16 +69,21 @@ public class Test {
 
      public static int func( int n)
         {
-            if(n == 1)
+            if(n == 1){
                 return 0;
-            if(n % 2 == 0)
+
+            }
+            if(n % 2 == 0){
                 return 1 + func(n/2);
+            }
             int x = func(n + 1);
             int y = func(n - 1);
-            if(x > y)
+            if(x > y){
                 return y+1;
-            else
+            } else{
+
                 return x+1;
+            }
 
     }
 

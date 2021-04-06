@@ -2,8 +2,10 @@ package com.binblink.test;
 
 
 import com.binblink.datastructure.tree.RedBlackTree;
+import com.binblink.springboot.bean.Person;
+import org.junit.platform.commons.util.StringUtils;
 
-import java.util.HashMap;
+import java.util.*;
 
 
 /**
@@ -13,7 +15,7 @@ import java.util.HashMap;
  */
 public class Test {
 
-    class A{
+    class A {
         @Override
         public int hashCode() {
             return 1;
@@ -21,15 +23,14 @@ public class Test {
     }
 
 
-
     @org.junit.jupiter.api.Test
-    public void test(){
+    public void test() {
         Integer.toBinaryString(151565);
-        A s = new  A();
+        A s = new A();
 
         A m = s;
 
-        System.out.println(s==m);
+        System.out.println(s == m);
 //        System.out.println(System.identityHashCode(s));
 //        System.out.println(System.identityHashCode(m));
 
@@ -39,10 +40,10 @@ public class Test {
     }
 
     @org.junit.jupiter.api.Test
-    public void hashmapTest(){
+    public void hashmapTest() {
 
-        HashMap<A,String> map = new HashMap<>(70);
-        A a  =  new A();
+        HashMap<A, String> map = new HashMap<>(70);
+        A a = new A();
         A b = new A();
         System.out.println(System.identityHashCode(a));
         System.out.println(System.identityHashCode(b));
@@ -51,7 +52,7 @@ public class Test {
 //         }
         System.out.println(a.hashCode());
         System.out.println(b.hashCode());
-      map.put(a,"test");
+        map.put(a, "test");
 
         System.out.println();
 
@@ -63,7 +64,7 @@ public class Test {
      * https://www.cs.usfca.edu/~galles/visualization/RedBlack.html 可以去和这个对比(网站删除时是前驱节点)
      */
     @org.junit.jupiter.api.Test
-    public void testRedBlackTree(){
+    public void testRedBlackTree() {
         RedBlackTree<Integer> root = new RedBlackTree();
 
         root.insert(30);
@@ -81,24 +82,41 @@ public class Test {
     }
 
     @org.junit.jupiter.api.Test
-    public void test4(){
+    public void test4() {
 
         System.out.println("/sadsd/dasd/dasd/das//security/login".contains("/security/login"));
     }
 
+    @org.junit.jupiter.api.Test
+    public void failFast() {
+
+        ArrayList<Person> list = new ArrayList<>();
+
+        list.add(new Person(11));
+        list.add(new Person(12));
+        list.add(new Person(13));
+        ArrayList<Person> temp = (ArrayList<Person>) list.clone();
+
+        temp.get(0).setAge(99);
+
+        System.out.println(list.get(0).getAge());
+        System.out.println(temp.get(0).getAge());
+
+    }
 
 
     public static void main(String[] args) throws InterruptedException {
 
-        int m =1,k=15,n=13,l=18;
+        int m = 1, k = 15, n = 13, l = 18;
 
-            if(m>1){
-                System.out.println("mmmm");
-            }else if(k>13){
-                System.out.println("kkkk");
-            } if(n==13){
-                System.out.println("nnnn");
-            }
+        if (m > 1) {
+            System.out.println("mmmm");
+        } else if (k > 13) {
+            System.out.println("kkkk");
+        }
+        if (n == 13) {
+            System.out.println("nnnn");
+        }
 
 
 //         boolean m = true;
@@ -158,8 +176,6 @@ public class Test {
 //        char[] m = s.toCharArray();
 //        HashMap
 
-        
-
 
 //        stackArray.pop();
 //        stackArray.pop();
@@ -173,5 +189,18 @@ public class Test {
     }
 
 
+    @org.junit.Test
+    public void stringTokenTest() {
+
+        String str = "asdsf asdas dasgggg";
+        StringTokenizer stringTokenizer = new StringTokenizer(str);
+        StringJoiner stringJoiner = new StringJoiner(",");
+        stringJoiner.add("aaaa").add("bbbb").add("cccc");
+
+        System.out.println(stringJoiner.toString());
+        while (stringTokenizer.hasMoreElements()) {
+            System.out.println(stringTokenizer.nextToken());
+        }
+    }
 
 }

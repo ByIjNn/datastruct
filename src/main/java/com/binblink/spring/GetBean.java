@@ -14,21 +14,21 @@ import java.util.ArrayList;
 public class GetBean {
 
 
-    @Test
-    public void getbeanTest1() {
-
-        String path = "classpath:application-spring.xml";
-
-        ApplicationContext xmlApplicationContext =
-                new ClassPathXmlApplicationContext(path);
-        SingleLinkedList singleLinkedList = (SingleLinkedList) xmlApplicationContext.getBean("list");
-
-        singleLinkedList.add(3);
-
-        ArrayList list = (ArrayList) xmlApplicationContext.getBean("list2");
-        System.out.println(list);
-        System.out.println(singleLinkedList.size() + "" + singleLinkedList.get(1));
-    }
+//    @Test
+//    public void getbeanTest1() {
+//
+//        String path = "classpath:application-spring.xml";
+//
+//        ApplicationContext xmlApplicationContext =
+//                new ClassPathXmlApplicationContext(path);
+//        SingleLinkedList singleLinkedList = (SingleLinkedList) xmlApplicationContext.getBean("list");
+//
+//        singleLinkedList.add(3);
+//
+//        ArrayList list = (ArrayList) xmlApplicationContext.getBean("list2");
+//        System.out.println(list);
+//        System.out.println(singleLinkedList.size() + "" + singleLinkedList.get(1));
+//    }
 
     /**
     *
@@ -37,15 +37,15 @@ public class GetBean {
     * @Description
     *
     **/
-    @Test
-    public void testDog(){
-        String path = "classpath:application-spring.xml";
-
-        ApplicationContext app =
-                new ClassPathXmlApplicationContext(path);
-        Dog dog = (Dog) app.getBean("dog");
-
-    }
+//    @Test
+//    public void testDog(){
+//        String path = "classpath:application-spring.xml";
+//
+//        ApplicationContext app =
+//                new ClassPathXmlApplicationContext(path);
+//        Dog dog = (Dog) app.getBean("dog");
+//
+//    }
 
     @Test
     public void lifecycle(){
@@ -61,11 +61,11 @@ public class GetBean {
     }
 
 
-    public static void main(String[] args) {
-        String path = "classpath:application.xml";
-
-        ClassPathXmlApplicationContext xmlApplicationContext =
-                new ClassPathXmlApplicationContext(path);
-        SingleLinkedList singleLinkedList = (SingleLinkedList) xmlApplicationContext.getBean("list");
-    }
+//    public static void main(String[] args) {
+//        String path = "classpath:application.xml";
+//
+//        ClassPathXmlApplicationContext xmlApplicationContext =
+//                new ClassPathXmlApplicationContext(path);
+//        SingleLinkedList singleLinkedList = (SingleLinkedList) xmlApplicationContext.getBean("list");
+//    }
 }

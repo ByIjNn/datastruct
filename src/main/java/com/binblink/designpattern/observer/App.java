@@ -30,6 +30,7 @@ public class App {
         jdkSubject.addObserver(new ObserverByJDK2());
 
         jdkSubject.chargeWeather(WeatherData.WINTER);
-        weatherSubject.changeWeather(WeatherData.SUMMER);
+//        weatherSubject.changeWeather(WeatherData.WINTER);
+
     }
 }

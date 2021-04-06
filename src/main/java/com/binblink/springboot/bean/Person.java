@@ -95,7 +95,12 @@ public class Person  {
         this.dog = dog;
     }
 
+    public Person(Integer age) {
+        this.age = age;
+    }
 
+    public Person() {
+    }
 
     @Override
     public String toString() {
