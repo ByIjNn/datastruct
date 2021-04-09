@@ -40,28 +40,83 @@ package com.binblink.leetcode.medium;
 public class RevoleNums {
 
 
-    public int findNumb(int[] arr, int start, int end, int target) {
+    public static int findNumb(int[] arr, int target) {
 
-        int mid = (end - start) / 2 + start;
-        int midValue = arr[mid];
-        int startValue = arr[start];
+        int start = 0;
+        int end = arr.length - 1;
 
-        if (target == midValue) {
-            return mid;
-        }
 
-        if (target < midValue) {
+        while (end > start) {
+            int mid = (end - start) / 2 + start;
+            int midValue = arr[mid];
+            int startValue = arr[start];
+            int endValue = arr[end];
+
+            if (target == midValue) {
+                return mid;
+            }
+
+            //k值在左区
             if (midValue < startValue) {
-                end = mid;
-                return findNumb(arr, start, end, target);
+
+                if (target < midValue) {
+                    end = mid;
+                    continue;
+                }
+
+                if (target > midValue) {
+                    if (target == endValue) {
+                        return end;
+                    }
+
+                    if (target < endValue) {
+                        //在右区二分
+                        start = mid;
+                        continue;
+                    }
+
+                    if (target > endValue) {
+                        //在左区二分
+                        end = mid;
+                        continue;
+                    }
+                }
+            }
+
+            //k在右区或当前数组已经完全升序
+            if (midValue > startValue) {
+
+                if (target < midValue) {
+
+                    if (target == startValue) {
+                        return start;
+                    }
+
+                    if (target > startValue) {
+                        end = mid;
+                        continue;
+                    }
+
+                    if (target < startValue) {
+                        start = mid;
+                        continue;
+                    }
+                }
+                if (target > midValue) {
+                    start = mid;
+                    continue;
+                }
             }
         }
-        return 0;
+        return -1;
     }
 
 
     public static void main(String[] args) {
 
+        int arr[] = {24, 33, 35, 37, 38, 44, 47, 49, 77, 89, 90, 1, 2, 3, 4, 5, 6, 7, 8, 16, 17, 18};
+
+        System.out.println(findNumb(arr, 18));
 
     }
 }

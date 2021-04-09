@@ -3,9 +3,8 @@ package com.binblink.test;
 
 import com.binblink.datastructure.tree.RedBlackTree;
 import com.binblink.springboot.bean.Person;
-import org.junit.platform.commons.util.StringUtils;
 
-import java.security.KeyPairGenerator;
+import java.net.URL;
 import java.util.*;
 
 
@@ -203,6 +202,13 @@ public class Test {
             System.out.println(stringTokenizer.nextToken());
         }
 
+    }
+    @org.junit.Test
+    public void scannClassPackageTest(){
+
+       URL url =  Thread.currentThread().getContextClassLoader().getResource("");
+
+        System.out.println(url.getProtocol());
 
     }
 
