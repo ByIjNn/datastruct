@@ -45,6 +45,13 @@ public class RevoleNums {
         int start = 0;
         int end = arr.length - 1;
 
+        //一个
+        if(start == end){
+            if(arr[start] == target){
+                return start;
+            }
+        }
+
 
         while (end > start) {
             int mid = (end - start) / 2 + start;
@@ -54,6 +61,15 @@ public class RevoleNums {
 
             if (target == midValue) {
                 return mid;
+            }
+
+            //两个
+            if((end-start) <= 1){
+                if(endValue == target){
+                    return end;
+                }else{
+                    break;
+                }
             }
 
             //k值在左区
@@ -114,9 +130,13 @@ public class RevoleNums {
 
     public static void main(String[] args) {
 
-        int arr[] = {24, 33, 35, 37, 38, 44, 47, 49, 77, 89, 90, 1, 2, 3, 4, 5, 6, 7, 8, 16, 17, 18};
+//        int arr[] = {24, 33, 35, 37, 38, 44, 47, 49, 77, 89, 90, 1, 2, 3, 4, 5, 6, 7, 8, 16, 17, 18};
 
-        System.out.println(findNumb(arr, 18));
+//        int arr[] = {24,33,1,2,3,4,5,6};
+
+        int arr[] = {24};
+
+        System.out.println(findNumb(arr, 24));
 
     }
 }
