@@ -1,6 +1,5 @@
 package com.binblink.leetcode.simple;
 
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;

@@ -76,9 +76,7 @@ public class RedisUtil {
         } catch (Exception e) {
             e.printStackTrace();
             return false;
-
         }
-
     }
 
     /**
@@ -644,7 +642,7 @@ public class RedisUtil {
     /**
      * 删除锁也就是释放锁
      */
-    public void  releaseLock(String key) {
+    public void releaseLock(String key) {
 
         redisTemplate.delete(key);
     }

@@ -1,6 +1,5 @@
 package com.binblink.javase.lambda;
 
-
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -20,6 +19,10 @@ public class CommonUserOFLambda {
     public void test(){
         new Thread(()->{
             System.out.println("Thread-1");
+        }).start();
+
+        new Thread(() ->{
+            System.out.println("Thread-2");
         }).start();
 
         //等价于

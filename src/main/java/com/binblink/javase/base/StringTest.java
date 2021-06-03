@@ -2,6 +2,8 @@ package com.binblink.javase.base;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.StringJoiner;
+
 /**
  * @author binblink
  * @version 1.0.0
@@ -36,6 +38,19 @@ public class StringTest {
         System.out.println(s == m);
         System.out.println(s == j);
         System.out.println(s == o);
+
+    }
+
+    @Test
+    public void stringJoinerTest(){
+        String separator = "|";
+        StringJoiner sj = new StringJoiner(separator);
+
+        sj.add("asdasd");
+        sj.add("fsasdad");
+        sj.add("feweeeee");
+
+        System.out.println(sj.toString());
 
     }
 

@@ -51,12 +51,7 @@ public class MapTest {
 
         //第4种
         map.forEach((k,v)->{
-
             System.out.println("key"+ k+","+"value:"+v);
         });
-
-
-
-
     }
 }
