@@ -133,10 +133,5 @@ public class FindIndexByTarget {
 
         findIndexByTarget.findResult(target, findIndexByTarget.arr);
         findIndexByTarget.getIndex(target);
-
-
-
     }
-
-
 }

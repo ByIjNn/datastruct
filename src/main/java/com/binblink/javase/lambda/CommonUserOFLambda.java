@@ -17,16 +17,12 @@ public class CommonUserOFLambda {
      */
     @Test
     public void test(){
+
         new Thread(()->{
             System.out.println("Thread-1");
         }).start();
 
-        new Thread(() ->{
-            System.out.println("Thread-2");
-        }).start();
-
         //等价于
-
 //        new Thread(new Runnable() {
 //            @Override
 //            public void run() {

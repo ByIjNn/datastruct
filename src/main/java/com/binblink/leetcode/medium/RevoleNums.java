@@ -130,11 +130,11 @@ public class RevoleNums {
 
     public static void main(String[] args) {
 
-        int arr[] = {24, 33, 35, 37, 38, 44, 47, 49, 77, 89, 90, 1, 2, 3, 4, 5, 6, 7, 8, 16, 17, 18};
+//        int arr[] = {24, 33, 35, 37, 38, 44, 47, 49, 77, 89, 90, 1, 2, 3, 4, 5, 6, 7, 8, 16, 17, 18};
 
 //        int arr[] = {24,33,1,2,3,4,5,6};
 
-//        int arr[] = {24,5};
+        int arr[] = {24,5};
 
         System.out.println(findNumb(arr, 5));
 

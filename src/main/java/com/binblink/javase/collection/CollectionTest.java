@@ -22,16 +22,16 @@ public class CollectionTest {
         list.add("kkk");
         list.add("mm");
 
-        list.removeIf(e ->  e.equals("qqqq"));
-        list.parallelStream().anyMatch(e->e.contains("a"));
-        List<Integer> list1 = list.stream().map(e->{
-            if("asd".equals(e)){
-                return new Integer(2);
-            }
-            return new Integer(1);
-        }).collect(Collectors.toList());
+        list.removeIf(e ->  e.equals("asd"));
+//        list.parallelStream().anyMatch(e->e.contains("a"));
+//        List<Integer> list1 = list.stream().map(e->{
+//            if("asd".equals(e)){
+//                return new Integer(2);
+//            }
+//            return new Integer(1);
+//        }).collect(Collectors.toList());
 
-        System.out.println(list1);
+//        System.out.println(list1);
         System.out.println(list);
     }
 }
